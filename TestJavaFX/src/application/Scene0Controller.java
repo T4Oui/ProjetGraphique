@@ -16,12 +16,13 @@ public class Scene0Controller implements Initializable {
     private MediaView videoPremiereScene;
     private MediaPlayer mediaPlayer;
     private Media media;
+    private File file ;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        String path = "VPremiereScene.mp4";
+        file = new File("VPremiereScene.mp4");
         try {
-            media = new Media(new File(path).toString()) ;
+            media = new Media(file.toURI().toString()) ;
             mediaPlayer = new MediaPlayer(media);
             videoPremiereScene.setMediaPlayer(mediaPlayer);
             mediaPlayer.setAutoPlay(true);

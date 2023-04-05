@@ -26,19 +26,34 @@ public class MainSceneController {
     private Button buttonTexte;
 
     @FXML
-    void clickButtonAdmin(ActionEvent event) {
+    void clickButtonAdmin(ActionEvent event) throws Exception {
+    	Parent root = FXMLLoader.load(getClass().getResource("SceneMot_De_Passe.fxml"));
+    	Scene scene = new Scene(root);
+    	Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    	stage.setScene(scene);
+    	stage.show();
 
     }
 
     @FXML
-        void clickButtonSon(ActionEvent event) throws Exception  {
+        void clickButtonSon(ActionEvent event) throws Exception    {
+		Parent root = FXMLLoader.load(getClass().getResource("SceneRechercheSon.fxml"));
+		Scene scene = new Scene(root);
+		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		stage.setScene(scene);
+		stage.show();
         	
 
         }
 
 
     @FXML
-    void clickButtonImage(ActionEvent event) throws Exception{
+    void clickButtonImage(ActionEvent event)  throws Exception{
+    	Parent root = FXMLLoader.load(getClass().getResource("SceneRechercheImage.fxml"));
+    	Scene scene = new Scene(root);
+    	Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    	stage.setScene(scene);
+    	stage.show();
 
     }
 

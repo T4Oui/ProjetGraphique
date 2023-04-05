@@ -18,7 +18,12 @@ public class SceneHistoriqueController {
     private Button buttonRetourner;
 
     @FXML
-    void clickButtonAdmin(ActionEvent event) {
+    void clickButtonAdmin(ActionEvent event) throws Exception {
+    	Parent root = FXMLLoader.load(getClass().getResource("SceneMot_De_Passe.fxml"));
+    	Scene scene = new Scene(root);
+    	Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    	stage.setScene(scene);
+    	stage.show();
 
     }
 
